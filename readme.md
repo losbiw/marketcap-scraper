@@ -3,7 +3,7 @@
 
 # About
 
-There don't appear to be free, publically available datasets containing historic marketcaps of selected stocks. This project scrapes data from [macrotrends.net](https://www.macrotrends.net/) and turns it into a human-readable excel file. A few words of advice:
+There don't appear to be free, publically available datasets containing historic marketcaps of selected stocks. This project scrapes data from [macrotrends.net](https://www.macrotrends.net/) and turns it into a human-readable excel file.
 
 > [!NOTE]
 > A few words of advice:
