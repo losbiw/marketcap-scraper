@@ -1,4 +1,7 @@
 {
   "base_url": "https://www.macrotrends.net/assets/php/",
-  "file_name": "market_cap.php"
+  "file_name": "market_cap.php",
+  "metric_col_dest": "marketcap",
+  "value_col": "v1",
+  "data_extraction_regex": "chartData = (\\[(.*?)\\])"
 }

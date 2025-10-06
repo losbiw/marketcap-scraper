@@ -1,4 +1,5 @@
 import pandas as pd
+from src.config import config
 
 
 def filter_entries(dataframe: pd.DataFrame, date_range: tuple[str, str]):
@@ -16,5 +17,7 @@ def write_to_excel(data: list[tuple[any, str]], output_file: str, date_range: tu
       json, sheet_name = entry
 
       df = pd.DataFrame(json)
+      df.rename({config.value_col: config.metric_col_dest},
+                axis='columns', inplace=True)
       filtered_df = filter_entries(df, date_range)
       filtered_df.to_excel(writer, sheet_name=sheet_name, index=False)

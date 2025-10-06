@@ -3,7 +3,8 @@ from json import loads
 
 class Config:
   # base_url and res_file must be populated
-  to_find = ["base_url", "file_name"]
+  to_find = ["base_url", "file_name", "metric_col_dest",
+             "value_col", "data_extraction_regex"]
 
   def __init__(self, cfg_file):
     with open(cfg_file) as config:

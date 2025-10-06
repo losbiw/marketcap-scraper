@@ -1,10 +1,11 @@
 import re
 from json import loads
+from src.config import config
 
 
 def extract_data(files: list[str], tickers: list[str]):
   regex = re.compile(
-    r"chartData = (\[(.*?)\])", flags=re.DOTALL | re.MULTILINE)
+    config.data_extraction_regex, flags=re.DOTALL | re.MULTILINE)
 
   return [extract_json_from_file(file, regex, ticker) for (file, ticker) in zip(files, tickers)]
 
